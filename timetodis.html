@@ -18,7 +18,7 @@
     var ss = pad(remain % 60);
     var toghh = hh * 3600;
     var togmm = mm * 60;
-    var togss = toghh+ togmm + ss;
+    var togss = parseInt(toghh) + parseInt(togmm) + parseInt(ss);
     document.getElementById('time').innerHTML =
       //hh + ":" + mm + ":" + ss;
       togss;
