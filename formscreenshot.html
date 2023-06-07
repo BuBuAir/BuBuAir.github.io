@@ -4,7 +4,7 @@
 <title>Screenshot</title>
 </head>
 <body>
-<div id="sscontainer">
+<div id="ss">
         <h1>BuBu</h1>
         <input>
     </div>
@@ -19,7 +19,7 @@
     src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript">  
         $('#capture-screenshot').click(function() {
-            const screenshotTarget = document.getElementByID("sscontainer");
+            const screenshotTarget = document.getElementByID("ss");
             html2canvas(screenshotTarget).then(canvas => {
                 //document.body.appendChild(canvas);  
                 dataURL = canvas.toDataURL();
