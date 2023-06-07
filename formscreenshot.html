@@ -27,7 +27,7 @@
                 sclink.target = "_blank";
                 sclink.innerHTML = "View Screenshot";
                 sclink.id = "viewbtn";
-                sclink.onclick = document.getDocumentByID("viewbtn").remove();
+                sclink.setAttribute("onclick", "document.getDocumentByID("viewbtn").remove()");
                 document.body.appendChild(sclink);
             });
         });
