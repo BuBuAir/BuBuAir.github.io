@@ -2,14 +2,18 @@
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/LATEST-VERSION/html2canvas.min.js"></script>
 <script>
+function capture() {
 html2canvas(document.body).then(canvas => {
 let a = document.createElement("a");
 a.download = "ss.png";
-a.innerHTML = "Done";
+//a.innerHTML = "Done";
 a.href = canvas.toDataURL("image/png");
+a.click();
 });
+}
 </script>
 </head>
 <body> 
 <input>
+<a href="javascript:capture();">Done</a>
 </body>
