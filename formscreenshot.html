@@ -19,7 +19,7 @@
     src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript">  
         $('#capture-screenshot').click(function() {
-            const screenshotTarget = document.getElementByID("ss");
+            const screenshotTarget = document.body;
             html2canvas(screenshotTarget).then(canvas => {
                 //document.body.appendChild(canvas);  
                 dataURL = canvas.toDataURL();
