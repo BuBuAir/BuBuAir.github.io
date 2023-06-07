@@ -19,6 +19,7 @@
     src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript">  
         $('#capture-screenshot').click(function() {
+            document.getElementByID("capture-screenshot").display = none;   
             const screenshotTarget = document.body;
             html2canvas(screenshotTarget).then(canvas => {
                 //document.body.appendChild(canvas);  
@@ -28,6 +29,7 @@
                 sclink.target = "_blank";
                 sclink.innerHTML = "View Screenshot";  
                 sclink.click();
+                document.getElementByID("capture-screenshot").display = block;    
                 //document.body.appendChild(sclink);
             });
         });
