@@ -4,13 +4,14 @@
 <title>Screenshot</title>
 </head>
 <body>
-    <div class="container">
+<div id="sscontainer">
         <h1>BuBu</h1>
         <input>
+    </div>
         <p>
             <button id="capture-screenshot">Capture Screenshot</button>
         </p>
-    </div>
+
 
     <script
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,16 +19,14 @@
     src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript">  
         $('#capture-screenshot').click(function() {
-            const screenshotTarget = document.body;
+            const screenshotTarget = document.getElementByID("sscontainer");
             html2canvas(screenshotTarget).then(canvas => {
                 //document.body.appendChild(canvas);  
                 dataURL = canvas.toDataURL();
                 let sclink = document.createElement("a");
                 sclink.href = dataURL;
                 sclink.target = "_blank";
-                sclink.innerHTML = "View Screenshot";
-                sclink.id = "viewbtn";
-                sclink.setAttribute("onclick", "document.getDocumentByID("viewbtn").remove()");
+                sclink.innerHTML = "View Screenshot";  
                 document.body.appendChild(sclink);
             });
         });
