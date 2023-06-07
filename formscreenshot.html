@@ -26,7 +26,7 @@
                 sclink.href = dataURL;
                 sclink.target = "_blank";
                 sclink.innerHTML = "View Screenshot";
-                sclink.onclick = sclink.remove();
+                sclink.onclick = "sclink.remove();";
                 document.body.appendChild(sclink);
             });
         });
