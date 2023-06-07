@@ -1,19 +1,30 @@
+<!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/LATEST-VERSION/html2canvas.min.js"></script>
-<script>
-function capture() {
-html2canvas(document.body).then(canvas => {
-let a = document.createElement("a");
-a.download = "ss.png";
-//a.innerHTML = "Done";
-a.href = canvas.toDataURL("image/png");
-a.click();
-});
-}
-</script>
+<title>How to Capture Screenshot of Page using JavaScript</title>
+<link rel='stylesheet' href='form.css' type='text/css' />
 </head>
-<body> 
-<input>
-<a href="javascript:capture();">Done</a>
+<body>
+    <div class="phppot-container">
+        <h1>How to Capture Screenshot of Page using JavaScript</h1>
+        <p>
+            <button id="capture-screenshot">Capture Screenshot</button>
+        </p>
+    </div>
+
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+    src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script type="text/javascript">  
+        $('#capture-screenshot').click(function() {
+            const screenshotTarget = document.body;
+            html2canvas(screenshotTarget).then(canvas => {
+                document.body.appendChild(canvas);  
+                dataURL = canvas.toDataURL();
+                window.open(dataURL);
+            });
+        });
+    </script>
 </body>
+</html>
