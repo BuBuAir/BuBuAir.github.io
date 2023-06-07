@@ -20,9 +20,12 @@
         $('#capture-screenshot').click(function() {
             const screenshotTarget = document.body;
             html2canvas(screenshotTarget).then(canvas => {
-                document.body.appendChild(canvas);  
+                //document.body.appendChild(canvas);  
                 dataURL = canvas.toDataURL();
-                window.open(dataURL);
+                let sclink = document.createElement("a");
+                sclink.href = dataURL;
+                sclink.target = "_blank";
+                sclink.innerHTML = "View Screenshot";
             });
         });
     </script>
