@@ -66,9 +66,27 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-<script type="text/javascript" src="https://bubuair.github.io/formscreenshot/capture.js"></script>
+<script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+    src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script type="text/javascript">  
+        $('#capture-screenshot').click(function() {
+            $("#capture-screenshot").hide();
+            const screenshotTarget = document.body;
+            html2canvas(screenshotTarget).then(canvas => {
+                //document.body.appendChild(canvas);  
+                dataURL = canvas.toDataURL();
+                let sclink = document.createElement("a");
+                sclink.href = dataURL;
+                sclink.target = "_blank";
+                sclink.innerHTML = "View Screenshot";  
+                sclink.click();
+                $("#capture-screenshot").show();    
+                //document.body.appendChild(sclink);
+            });
+        });
+    </script>
 <div class="container">
   <form>
   <div class="row">
