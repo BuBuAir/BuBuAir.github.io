@@ -1,3 +1,5 @@
+paste this in html tag, at the end, after all other scripts and content and stuff
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script type="text/javascript" src="https://bubuair.github.io/formscreenshot/capture.js"></script>
