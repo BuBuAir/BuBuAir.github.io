@@ -3,7 +3,7 @@
   <script>
     let stored = localStorage.getItem("viewonce");
     if (stored == "true") {
-      location.replace("//github.com");
+      location.replace("viewed.html");
     }
 
     function closePage() {
@@ -11,7 +11,7 @@
     }
     
     localStorage.setItem("viewonce", "true");
-    setTimeout("2000", closePage);
+    setTimeout("3500", closePage);
   </script>
 
   View Once
