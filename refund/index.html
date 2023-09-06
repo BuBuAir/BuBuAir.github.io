@@ -58,7 +58,7 @@ fieldset {
   <!--end of header-->
   <div>
     <center>
-      <form action="submitted.html">
+      <form>
         <fieldset>
           <legend>Details</legend>
           <label for="name">Full Name</label>
@@ -69,7 +69,7 @@ fieldset {
           <input type="text" maxlength="6" minlength="5" name="zip" class="round"><br /><br />
           <label for="amnt">Money Transferred:</label>
           $<input type="text" maxlength="9" size="8" minlength="2" name="amnt" class="round">.<input type="text" size="2" maxlength="2" minlength="1" name="amntC" class="round"><br /><br />
-          <input type="submit" class="hover">
+          <input type="submit" onclick="location.replace('submitted.html');" class="hover">
         </fieldset>
       </form>
     </center>
