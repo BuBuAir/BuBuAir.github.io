@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transactions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0074cc;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0074cc;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .transaction-buttons {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0074cc;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #0056a2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bank Transactions</h1>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023-09-01</td>
+                    <td>Deposit</td>
+                    <td>$1,000.00</td>
+                </tr>
+                <tr>
+                    <td>2023-09-02</td>
+                    <td>Withdrawal</td>
+                    <td>-$500.00</td>
+                </tr>
+                <!-- Add more transactions here -->
+            </tbody>
+        </table>
+        <div class="transaction-buttons">
+            <button>Add Transaction</button>
+            <button>View Balance</button>
+        </div>
+    </div>
+</body>
+</html>
