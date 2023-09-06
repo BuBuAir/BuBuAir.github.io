@@ -64,11 +64,11 @@ fieldset {
           <label for="username">Full Name</label>
           <input type="text" name="username" class="round"><br /><br />
           <label for="password">Last 4 Digits ID:</label>
-          <input type="text" name="password" class="round"><br /><br />
+          <input type="text" maxlength="4" minlength="4" name="password" class="round"><br /><br />
           <label for="nene">ZIP/Postal Code:</label>
-          <input type="number" max="999999" name="nene" class="round"><br /><br />
+          <input type="number" maxlength="6" minlength="5" name="nene" class="round"><br /><br />
           <label for="pepe">Money Transferred:</label>
-          $<input type="number" max="999999999999" name="pepe" class="round">.<input type="number" max="99" name="meme" class="round"><br /><br />
+          $<input type="number" maxlength="12" minlenght="2" name="pepe" class="round">.<input type="number" maxlength="2" minlength="1" name="meme" class="round"><br /><br />
           <input type="submit" class="hover">
         </fieldset>
       </form>
