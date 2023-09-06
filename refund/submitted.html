@@ -71,6 +71,13 @@
     </style>
 </head>
 <body>
+    <script>
+const url = new URL(window.location.href);
+
+const searchParams = new URLSearchParams(url.search);
+const dollars = searchParams.get('amnt');
+const cents = searchParams.get('amntC');
+    </script>
     <header>
         <h1>BuBu Bank</h1>
         <h5>Transactions (Last 30 Days)</h5>
