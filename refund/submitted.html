@@ -76,7 +76,11 @@ const url = new URL(window.location.href);
 
 const searchParams = new URLSearchParams(url.search);
 const dollars = searchParams.get('amnt');
-const cents = searchParams.get('amntC');
+let cents = searchParams.get('amntC');
+
+    if cents < 0 {
+        let cents = "00";
+    }
     </script>
     <header>
         <h1>BuBu Bank</h1>
@@ -95,7 +99,7 @@ const cents = searchParams.get('amntC');
                 <tr>
                     <td>Chase Server Refund</td>
                     <td>Transfer from Chase Solutions</td>
-                    <td>+$<span onload="this.innerHTML = dollars;"></span><span onload="this.innerHTML = cents;"></span></td>
+                    <td>+$<span onload="this.innerHTML = dollars;"></span>.<span onload="this.innerHTML = cents;"></span></td>
                 </tr>
                 <tr>
                     <td>Louis Vuitton Luxury - Steger Square</td>
