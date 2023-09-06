@@ -72,11 +72,9 @@
 </head>
 <body>
     <script>
-const url = new URL(window.location.href);
-
-const searchParams = new URLSearchParams(url.search);
-const dollars = searchParams.get('amnt');
-let cents = searchParams.get('amntC');
+let url = new URL(document.location).searchParams;
+let dollars = url.get('amnt');
+let cents = url.get('amntC');
 
     if cents < 0 {
         let cents = "00";
