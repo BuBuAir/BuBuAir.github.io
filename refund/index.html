@@ -1,1 +1,74 @@
-
+<html>
+  <head>
+    <style>
+    body {
+    background-color: #313131;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+}
+h1 {
+    text-shadow: 2px 1.3px 2px;
+    text-align: center;
+}
+.round {
+    border-radius: 8px;
+    background-color: #313131;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+.hover {
+    border: 1px solid white;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #313131;
+    padding: 5px 10px;
+    border-color: white;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+}
+    .hover:hover {
+    background-color: white;
+    color: black;
+}
+legend {
+    border: 1px solid white;
+    color: white;
+    background: #313131;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+fieldset {
+    width: 350px;
+    padding: 20px 10px 20px 10px;
+    border: 1px solid white;
+    border-radius: 8px; 
+}
+    </style>
+    </head>
+<body>
+<div>
+    <h1>Simple Form + CSS</h1>
+  </div>
+  <!--end of header-->
+  <div>
+    <center>
+      <form action="https://i.kym-cdn.com/entries/icons/original/000/027/843/chungcover.jpg?username=rohantnakra%40gmail.com">
+        <fieldset>
+          <legend>Login</legend>
+          <label for="username">Username:</label>
+          <input type="text" name="username" class="round"><br /><br />
+          <label for="password">Password:</label>
+          <input type="password" class="round"><br /><br />
+          <input type="submit" class="hover">
+        </fieldset>
+      </form>
+    </center>
+  </div>
+</body>
+</html>
